@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\exam_entity\exam_entity.csproj" />
+    <ProjectReference Include="..\exam_entity\BookshopDB.csproj" />
   </ItemGroup>
 
 </Project>

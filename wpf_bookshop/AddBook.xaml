@@ -6,6 +6,17 @@
         xmlns:local="clr-namespace:wpf_bookshop"
         mc:Ignorable="d"
         Title="AddBook" Height="250" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -19,18 +30,21 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Title</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Count of Pages</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Publication Year</TextBlock>
-        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Author Id</TextBlock>
-        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Genre Id</TextBlock>
+        <TextBlock Grid.Row="0">Title</TextBlock>
+        <TextBlock Grid.Row="1">Count of Pages</TextBlock>
+        <TextBlock Grid.Row="2">Publication Year</TextBlock>
+        <TextBlock Grid.Row="3">Author Id</TextBlock>
+        <TextBlock Grid.Row="4">Genre Id</TextBlock>
 
-        <TextBox x:Name="title" Grid.Row="0" Grid.Column="1"></TextBox>
-        <TextBox x:Name="pages" Grid.Row="1" Grid.Column="1"></TextBox>
-        <TextBox x:Name="year" Grid.Row="2" Grid.Column="1"></TextBox>
-        <TextBox x:Name="author" Grid.Row="3" Grid.Column="1"></TextBox>
-        <TextBox x:Name="genre" Grid.Row="4" Grid.Column="1"></TextBox>
+        <TextBox x:Name="title" Grid.Row="0"/>
+        <TextBox x:Name="pages" Grid.Row="1"/>
+        <TextBox x:Name="year" Grid.Row="2"/>
+        <TextBox x:Name="author" Grid.Row="3"/>
+        <TextBox x:Name="genre" Grid.Row="4"/>
 
-        <Button Click="Button_Click" Grid.Row="5" Grid.Column="1">Add Book</Button>
+        <Button Click="Button_Click" 
+                Grid.Row="5" 
+                Grid.Column="1"
+                Margin="2">Add Book</Button>
     </Grid>
 </Window>

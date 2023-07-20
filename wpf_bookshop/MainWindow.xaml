@@ -9,6 +9,12 @@
     <Window.DataContext>
         <local:ViewModel></local:ViewModel>
     </Window.DataContext>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
     <ScrollViewer>
         <StackPanel>
             <Grid>
@@ -22,11 +28,11 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Command="{Binding AuthorsTableCommand}" Height="30" Margin="10" Grid.Column="0">Auhtors</Button>
-                <Button Command="{Binding BooksTableCommand}" Height="30" Margin="10" Grid.Column="1">Books</Button>
-                <Button Command="{Binding GenresTableCommand}" Height="30" Margin="10" Grid.Column="2">Country</Button>
-                <Button Command="{Binding CountriesTableCommand}" Height="30" Margin="10" Grid.Column="3">Genre</Button>
-                <Button Command="{Binding BooksInStoreTableCommand}" Height="30" Margin="10" Grid.Column="4">BookInStore</Button>
+                <Button Command="{Binding AuthorsTableCommand}" Grid.Column="0">Auhtors</Button>
+                <Button Command="{Binding BooksTableCommand}" Grid.Column="1">Books</Button>
+                <Button Command="{Binding GenresTableCommand}" Grid.Column="2">Country</Button>
+                <Button Command="{Binding CountriesTableCommand}" Grid.Column="3">Genre</Button>
+                <Button Command="{Binding BooksInStoreTableCommand}" Grid.Column="4">BookInStore</Button>
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>
@@ -37,11 +43,11 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Command="{Binding AddBookCommand}" Height="30" Margin="10" Grid.Column="0">Add Book</Button>
-                <Button Command="{Binding DeleteBookCommand}" Height="30" Margin="10" Grid.Column="1">Delete Book</Button>
-                <Button Command="{Binding SaveChangesCommand}" Height="30" Margin="10" Grid.Column="2">Save Changes</Button>
+                <Button Command="{Binding AddBookCommand}" Grid.Column="0">Add Book</Button>
+                <Button Command="{Binding DeleteBookCommand}" Grid.Column="1">Delete Book</Button>
+                <Button Command="{Binding SaveChangesCommand}" Grid.Column="2">Save Changes</Button>
             </Grid>
-            <DataGrid ItemsSource="{Binding CurrentTable}" SelectedItem="{Binding SelectedBook}" SelectionMode="Single"  x:Name="datagrid"></DataGrid>
+            <DataGrid ItemsSource="{Binding CurrentTable}" SelectedItem="{Binding SelectedBook}" SelectionMode="Single"/>
         </StackPanel>
     </ScrollViewer>
     
