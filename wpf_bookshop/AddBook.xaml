@@ -1,0 +1,36 @@
+﻿<Window x:Class="wpf_bookshop.AddBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_bookshop"
+        mc:Ignorable="d"
+        Title="AddBook" Height="250" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">Title</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">Count of Pages</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">Publication Year</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Author Id</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Genre Id</TextBlock>
+
+        <TextBox x:Name="title" Grid.Row="0" Grid.Column="1"></TextBox>
+        <TextBox x:Name="pages" Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox x:Name="year" Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox x:Name="author" Grid.Row="3" Grid.Column="1"></TextBox>
+        <TextBox x:Name="genre" Grid.Row="4" Grid.Column="1"></TextBox>
+
+        <Button Click="Button_Click" Grid.Row="5" Grid.Column="1">Add Book</Button>
+    </Grid>
+</Window>
